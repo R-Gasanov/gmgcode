@@ -22,7 +22,12 @@ dictionary_remove = {
 # We are using functions since essentially what we will be doing here is sifting throught the various amounts of data and taking the things we actually need and want
 def my_function(tablename):
 # Here is where we define my function
-    return tablename.endswith('_gz') or tablename.startswith('0') or tablename.startswith('1') or tablename.startswith('2')
+    return any([
+        tablename.endswith('_gz'),
+        tablename.startswith('0'),
+        tablename.startswith('1'),
+        tablename.startswith('2')
+    ])
 
 def process_database(name):
 
