@@ -1,0 +1,14 @@
+There are a lot of string methods out there. And can be very useful for us when using strings
+
+Helping us manipulate them however we generally want and theres an endless amount for us to useful
+
+Here are some of them that I believe are really good
+
+Currently at the moment I don't have a large amount of time, so heres the link to all of them for now
+
+https://www.w3schools.com/python/python_strings_methods.asp
+
+
+P.S Rafael make sure you update this place since, its likely this will be very important for us to be
+using in the future most certainly
+

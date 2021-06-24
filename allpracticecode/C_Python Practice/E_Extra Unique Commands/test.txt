@@ -1,0 +1,8 @@
+Good Morning
+
+
+
+What the code essentially does,
+is it diverts the output of the file to a specific file for us to look at whenever we want.
+This will be easier for people looking at data they wan't to consistantly monitor when doing so.
+Which for this instance is important in this current scenario with the long text in our database.

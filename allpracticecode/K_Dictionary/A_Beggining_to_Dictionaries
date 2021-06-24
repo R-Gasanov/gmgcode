@@ -1,0 +1,25 @@
+Dictionarys
+
+Now what we will be looking into specifically is Dictionarys, they are unique compared to the rest
+of the variable types there are. For one they can store values within pairs. Which essentially mean,
+they can provide variables that are linked between one anothered. Which can be useful is specific terms.
+
+(Characteristics of Dictionarys)
+
+The dictionary characteristics are slightly more complicated. Using curly brackets and unique formatting to represent their
+variables.
+
+(Dictionary Items)
+
+Dictionaries as only recently are ordered, meanwhile within python 3.6 and behind, they were unordered.
+
+Whats interersting and well different compared to a Tuple, is that it is ordered yet changable. 
+Meaning you can edit the contents within the Dictionary
+
+Although you can't have duplicates of a dictionary, which is one of its attributes.
+
+Dictionaries are by far written more differently and uniquely compared to the rest,
+they have curly brackets which have a unique format since Dictionaries tend to hold more values than others.
+
+They also have keys and values, which essentially link between each other, which can closely be resembled as
+subcatagories.
