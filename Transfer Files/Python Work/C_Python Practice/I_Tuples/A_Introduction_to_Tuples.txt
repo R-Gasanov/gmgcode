@@ -1,0 +1,23 @@
+Tuples
+
+What we will be looking into, is specifically Tuples, these are used to store multiple different
+items within a single variable. There are three other ways to store variables, from Lists, Sets
+& Dictionarys. We will now currently be looking at tuples.
+
+(Characteristics of Tuples)
+
+The tuples characteristics are simple, its the usage of curved brackets.
+
+(Tuple Items)
+
+Tuple items are ordered are ordered in a specific way and unchanageble. They also additionally
+allow duplicate values.
+
+To find out the order of the items, Tuples are indexed, the first item has index [0] while
+the next item is [1], and continues on in this cycle.
+
+Since tuples orders are unchangable there is something distinct about them. They can have
+duplicates, meaning they can have items with the same value.
+
+Thats about it for the basics in tuples, we'll look into the actual coding and discuss more
+about the Tuples in those code pieces.

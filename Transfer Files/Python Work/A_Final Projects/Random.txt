@@ -1,0 +1,173 @@
+)]}'
+  {
+    "id": "myProject~master~I8473b95934b5732ac55d26311a706c9c2bde9940",
+    "project": "myProject",
+    "branch": "master",
+    "change_id": "I8473b95934b5732ac55d26311a706c9c2bde9940",
+    "subject": "Implementing Feature X",
+    "status": "NEW",
+    "created": "2013-02-01 09:59:32.126000000",
+    "updated": "2013-02-21 11:16:36.775000000",
+    "mergeable": true,
+    "insertions": 34,
+    "deletions": 45,
+    "_number": 3965,
+    "owner": {
+      "_account_id": 1000096,
+      "name": "John Doe",
+      "email": "john.doe@example.com"
+    },
+    "labels": {
+      "Verified": {
+        "all": [
+          {
+            "value": 0,
+            "_account_id": 1000096,
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+          },
+          {
+            "value": 0,
+            "_account_id": 1000097,
+            "name": "Jane Roe",
+            "email": "jane.roe@example.com"
+          }
+        ],
+        "values": {
+          "-1": "Fails",
+          " 0": "No score",
+          "+1": "Verified"
+        }
+      },
+      "Code-Review": {
+        "all": [
+          {
+            "value": -1,
+            "_account_id": 1000096,
+            "name": "John Doe",
+            "email": "john.doe@example.com"
+          },
+          {
+            "value": 1,
+            "_account_id": 1000097,
+            "name": "Jane Roe",
+            "email": "jane.roe@example.com"
+          }
+        ]
+        "values": {
+          "-2": "This shall not be merged",
+          "-1": "I would prefer this is not merged as is",
+          " 0": "No score",
+          "+1": "Looks good to me, but someone else must approve",
+          "+2": "Looks good to me, approved"
+        }
+      }
+    },
+    "permitted_labels": {
+      "Verified": [
+        "-1",
+        " 0",
+        "+1"
+      ],
+      "Code-Review": [
+        "-2",
+        "-1",
+        " 0",
+        "+1",
+        "+2"
+      ]
+    },
+    "removable_reviewers": [
+      {
+        "_account_id": 1000096,
+        "name": "John Doe",
+        "email": "john.doe@example.com"
+      },
+      {
+        "_account_id": 1000097,
+        "name": "Jane Roe",
+        "email": "jane.roe@example.com"
+      }
+    ],
+    "reviewers": {
+      "REVIEWER": [
+        {
+          "_account_id": 1000096,
+          "name": "John Doe",
+          "email": "john.doe@example.com"
+        },
+        {
+          "_account_id": 1000097,
+          "name": "Jane Roe",
+          "email": "jane.roe@example.com"
+        }
+      ]
+    },
+    "current_revision": "674ac754f91e64a0efb8087e59a176484bd534d1",
+    "revisions": {
+      "674ac754f91e64a0efb8087e59a176484bd534d1": {
+        "kind": "REWORK",
+        "_number": 2,
+        "ref": "refs/changes/65/3965/2",
+        "fetch": {
+          "http": {
+            "url": "http://gerrit/myProject",
+            "ref": "refs/changes/65/3965/2"
+          }
+        }
+      }
+    }
+  }
+
+
+  #################################
+
+  # https://gerrit-review.googlesource.com/Documentation/rest-api-changes.html#set-review
+# https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/codecommit.html#CodeCommit.Client.get_comments_for_pull_request
+
+import boto3
+
+client = boto3.client('codecommit')
+
+ def convert_pr_comments_to_gerrit(pr_id):
+    response = client.get_comments_for_pull_request(
+        pullRequestId = "65"
+        )
+    {
+        "tag": reponse(pullRequestId),
+        "message": "Some nits need to be fixed.",
+        "labels": {
+        "Code-Review": -1
+        },
+        "comments": {
+        content: [
+            {
+            "line": 23,
+            "message": "[nit] trailing whitespace"
+            },
+            {
+            "line": 49,
+            "message": "[nit] s/conrtol/control"
+            },
+            {
+            "range": {
+                "start_line": 50,
+                "start_character": 0,
+                "end_line": 55,
+                "end_character": 20
+            },
+            "message": "Incorrect indentation"
+            }
+        ]
+        }
+    }
+
+
+#"""Retrieves comments from a pull request in CodeCommit
+#and converts them into the format required to post these comments
+#to gerrit.
+#
+ #   Returns a dictionary that can be used as a payload to the set-review
+ #   call.
+
+ #   """
