@@ -1,0 +1,1 @@
+autocmd bufreadpre COMMIT_EDITMSG setlocal textwidth=72

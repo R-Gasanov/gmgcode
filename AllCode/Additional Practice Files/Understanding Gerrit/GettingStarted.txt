@@ -1,0 +1,9 @@
+[~/Code/test]$ git checkout -b wiki   
+Switched to a new branch 'wiki'
+[~/Code/test]$ ## This is probably where you'd normally do some work
+[~/Code/test]$ ## Instead, we're just gonna add a line to the README :)
+[~/Code/test]$ echo `whoami` woz ''ere >> README.md
+[~/Code/test]$ git add .   
+[~/Code/test]$ git commit -m "Added my name to the README"
+[wiki 06cb563] Added my name to the README
+ 1 file changed, 1 insertion(+)

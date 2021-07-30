@@ -1,0 +1,38 @@
+DataTypes (Basic)
+
+There are many various different data types
+
+To be more specific, there are the 4 primary ones
+
+string (Only wording or letterings)
+Integer (Which is only whole numbers)
+Boolean (Boolean is an operator like NOT OR AND etc, and True & False
+float (These are usually decimal numbers and not whole numbers)
+
+Here are some examples
+
+x = 'Hello World' (String)
+
+y = 17 (Integer)
+
+z = True (Boolean)
+
+s = 17.5 (float)
+
+DataTypes (Complex)
+
+There are various more datatypes, so lets just catagorise them based on what we know with the basic four
+
+Text Type: str
+
+Numeric Type: int, float, complex
+
+Sequence Type: list, tuple, range
+
+Mapping Type: dict
+
+Set Type: set, frozenset
+
+Boolaean Type: bool
+
+Binary Type: bytes, bytearray, memoryview
